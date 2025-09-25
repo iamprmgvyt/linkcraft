@@ -72,7 +72,7 @@ export default function UrlShortener() {
             <Label htmlFor="alias">Custom alias (optional)</Label>
             <div className="flex items-center">
               <span className="text-muted-foreground text-sm p-2 rounded-l-md bg-muted">
-                linkcraft.vercel.app/
+                linkcraft-ashen.vercel.app/
               </span>
               <Input
                 id="alias"

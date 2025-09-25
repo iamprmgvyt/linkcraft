@@ -69,7 +69,7 @@ export async function shortenUrl(prevState: ShortenState, formData: FormData): P
     });
 
     const protocol = 'https://';
-    const host = 'linkcraft.vercel.app';
+    const host = 'linkcraft-ashen.vercel.app';
     
     return { message: 'URL shortened successfully!', shortUrl: `${protocol}${host}/${newLink.shortCode}` };
   } catch (error) {
