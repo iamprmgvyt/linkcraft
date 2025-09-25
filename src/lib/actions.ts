@@ -68,8 +68,8 @@ export async function shortenUrl(prevState: ShortenState, formData: FormData): P
       createdAt: new Date(),
     });
 
-    const protocol = process.env.NODE_ENV === 'production' ? 'https://' : 'http://';
-    const host = process.env.VERCEL_URL || 'localhost:9002'; // Default to localhost:9002 for dev
+    const protocol = 'https://';
+    const host = 'linkcraft.vercel.app';
     
     return { message: 'URL shortened successfully!', shortUrl: `${protocol}${host}/${newLink.shortCode}` };
   } catch (error) {
