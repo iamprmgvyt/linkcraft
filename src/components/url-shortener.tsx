@@ -1,7 +1,6 @@
 'use client';
 
-import { useFormState } from 'react-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useActionState, useEffect, useRef, useState } from 'react';
 import { Clipboard, ClipboardCheck, Link as LinkIcon, AlertCircle } from 'lucide-react';
 import { shortenUrl } from '@/lib/actions';
 import { Card, CardContent } from '@/components/ui/card';
@@ -15,7 +14,7 @@ import { Alert, AlertDescription, AlertTitle } from './ui/alert';
 const initialState = { message: null, errors: {}, shortUrl: null };
 
 export default function UrlShortener() {
-  const [state, dispatch] = useFormState(shortenUrl, initialState);
+  const [state, dispatch] = useActionState(shortenUrl, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
   const [copied, setCopied] = useState(false);

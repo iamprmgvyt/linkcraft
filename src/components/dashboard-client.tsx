@@ -1,7 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useState } from 'react';
 import { Link as LinkType } from '@/lib/definitions';
 import {
   Table,
@@ -55,7 +54,7 @@ export default function DashboardClient({ initialLinks }: { initialLinks: Serial
   const [editingLink, setEditingLink] = useState<SerializedLink | null>(null);
   const { toast } = useToast();
   
-  const [updateState, updateDispatch] = useFormState(updateLinkAction, { message: null, errors: {} });
+  const [updateState, updateDispatch] = useActionState(updateLinkAction, { message: null, errors: {} });
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);

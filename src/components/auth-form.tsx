@@ -1,6 +1,6 @@
 'use client';
 
-import { useFormState } from 'react-dom';
+import { useActionState } from 'react';
 import Link from 'next/link';
 import { login, signup } from '@/lib/actions';
 import { Label } from '@/components/ui/label';
@@ -15,7 +15,7 @@ type AuthFormProps = {
 
 export default function AuthForm({ mode }: AuthFormProps) {
   const action = mode === 'login' ? login : signup;
-  const [state, dispatch] = useFormState(action, { message: null, errors: {} });
+  const [state, dispatch] = useActionState(action, { message: null, errors: {} });
 
   return (
     <form action={dispatch} className="space-y-6">
