@@ -17,7 +17,7 @@ export default function Home() {
       </section>
 
       <section className="w-full max-w-5xl py-16">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           <FeatureCard
             icon={<Link2 className="h-10 w-10 text-primary" />}
             title="Powerful Shortening"
@@ -27,11 +27,6 @@ export default function Home() {
             icon={<BarChart2 className="h-10 w-10 text-primary" />}
             title="Simple Analytics"
             description="Track every click and measure your link's performance with our straightforward analytics."
-          />
-          <FeatureCard
-            icon={<Edit3 className="h-10 w-10 text-primary" />}
-            title="Easy Management"
-            description="Sign up for a free account to view, edit, and manage all of your shortened links in one place."
           />
         </div>
       </section>

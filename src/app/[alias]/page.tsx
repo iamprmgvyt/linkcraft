@@ -1,6 +1,5 @@
 import { findLinkByShortCode, incrementClickCount } from '@/lib/data';
 import { redirect } from 'next/navigation';
-import { notFound } from 'next/navigation';
 import { Link2, AlertTriangle } from 'lucide-react';
 
 type Props = {

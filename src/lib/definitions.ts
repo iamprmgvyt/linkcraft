@@ -6,14 +6,3 @@ export type Link = {
   clicks: number;
   createdAt: Date;
 };
-
-export type User = {
-  id:string;
-  email: string;
-  password: string; // In a real app, this would be a hash
-};
-
-export type SessionPayload = {
-  userId: string;
-  expiresAt: Date;
-};
