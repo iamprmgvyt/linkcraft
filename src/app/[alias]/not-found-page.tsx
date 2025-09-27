@@ -4,15 +4,15 @@ import { useEffect, useState } from 'react';
 import { AlertTriangle, Timer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 export default function NotFoundPage() {
   const [countdown, setCountdown] = useState(5);
+  const router = useRouter();
 
   useEffect(() => {
     if (countdown <= 0) {
-      // Using redirect from next/navigation is better for client-side routing
-      redirect('/');
+      router.push('/');
       return;
     }
 
@@ -21,7 +21,7 @@ export default function NotFoundPage() {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [countdown]);
+  }, [countdown, router]);
 
   return (
     <div className="flex h-[calc(100vh-theme(spacing.14))] flex-col items-center justify-center space-y-4 text-center p-4">
