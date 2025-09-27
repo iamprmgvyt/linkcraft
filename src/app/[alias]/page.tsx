@@ -28,9 +28,9 @@ function NotFoundRedirect() {
         <div className="flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10">
             <AlertTriangle className="w-10 h-10 text-destructive" />
         </div>
-      <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">Miền chưa được cấu hình</h1>
+      <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">Link Not Found</h1>
       <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-        Liên kết bạn đang tìm kiếm không tồn tại. Tự động chuyển hướng về trang chủ sau {countdown} giây...
+        The link you are looking for does not exist. Redirecting to the homepage in {countdown} seconds...
       </p>
       <div className="flex flex-col gap-2 min-[400px]:flex-row">
         <a
@@ -38,7 +38,7 @@ function NotFoundRedirect() {
           className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
         >
           <Timer className="mr-2 h-4 w-4" />
-          Về trang chủ ngay
+          Go to Homepage
         </a>
       </div>
     </div>
