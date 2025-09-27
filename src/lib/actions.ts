@@ -21,7 +21,7 @@ type ShortenState = {
   errors?: {
     longUrl?: string[];
     alias?: string[];
-    form?: string;
+    form?: string[];
   };
   message?: string | null;
   shortUrl?: string | null;
@@ -73,6 +73,6 @@ export async function shortenUrl(prevState: ShortenState, formData: FormData): P
     
     return { message: 'URL shortened successfully!', shortUrl: `${protocol}${host}/${newLink.shortCode}` };
   } catch (error) {
-    return { errors: {form: 'Database Error: Failed to create link.'}, message: 'Failed to shorten URL.' };
+    return { errors: {form: ['Database Error: Failed to create link.']}, message: 'Failed to shorten URL.' };
   }
 }

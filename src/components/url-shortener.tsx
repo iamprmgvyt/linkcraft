@@ -89,7 +89,7 @@ export default function UrlShortener() {
             )}
           </div>
           <SubmitButton
-            className="w-full bg-accent hover:bg-accent/90"
+            className="w-full"
             pendingText="Shortening..."
           >
             <LinkIcon className="mr-2 h-4 w-4" />
